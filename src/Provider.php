@@ -12,7 +12,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://www.yammer.com/dialog/oauth', $state);
+        return $this->buildAuthUrlFromBase(
+            'https://www.yammer.com/dialog/oauth', $state
+        );
     }
 
     /**
@@ -28,7 +30,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://www.yammer.com/api/v1/users/current.json', [
+        $response = $this->getHttpClient()->get(
+            'https://www.yammer.com/api/v1/users/current.json', [
             'headers' => [
                 'Authorization' => 'Bearer '.$token,
             ],
@@ -43,11 +46,9 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['id'],
-            'nickname' => $user['name'],
-            'name'     => $user['full_name'],
-            'email'    => $user['email'],
-            'avatar'   => $user['mugshot_url'],
+            'id' => $user['id'], 'nickname' => $user['name'],
+            'name' => $user['full_name'], 'email' => $user['email'],
+            'avatar' => $user['mugshot_url'],
         ]);
     }
 
@@ -56,7 +57,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenFields($code)
     {
-        return array_merge(parent::getTokenFields($code), ['grant_type' => 'authorization_code']);
+        return array_merge(parent::getTokenFields($code), [
+            'grant_type' => 'authorization_code',
+        ]);
     }
 
     /**
