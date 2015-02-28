@@ -1,5 +1,11 @@
 # Yammer OAuth2 Provider for Laravel Socialite
 
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/SocialiteProviders/Yammer.svg?style=flat-square)](https://scrutinizer-ci.com/g/SocialiteProviders/Yammer/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/socialiteproviders/yammer.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/yammer)
+[![Total Downloads](https://img.shields.io/packagist/dt/socialiteproviders/yammer.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/yammer)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/socialiteproviders/yammer.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/yammer)
+[![License](https://img.shields.io/packagist/l/socialiteproviders/yammer.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/yammer)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Contents
