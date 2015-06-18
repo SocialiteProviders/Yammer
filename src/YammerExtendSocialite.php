@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\Yammer;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
